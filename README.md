@@ -1,6 +1,6 @@
 - - -
 
-**_This project is not actively maintained. Proceed at your own risk!_**
+**_The project python-instagram is not actively maintained by Facebook anymore, I forked it to fix some bugs I've found when using it_**
 
 - - - 
 
