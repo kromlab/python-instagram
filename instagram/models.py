@@ -134,7 +134,7 @@ class MediaShortcode(Media):
 
 
 class Tag(ApiModel):
-    def __init__(self, name, **kwargs):
+    def __init__(self, name=None, **kwargs):
         self.name = name
         for key, value in six.iteritems(kwargs):
             setattr(self, key, value)
@@ -170,8 +170,8 @@ class Point(ApiModel):
 
 
 class Location(ApiModel):
-    def __init__(self, id, *args, **kwargs):
-        self.id = str(id)
+    def __init__(self, id=None, *args, **kwargs):
+        self.id = str(id) if id else None
         for key, value in six.iteritems(kwargs):
             setattr(self, key, value)
 
@@ -192,7 +192,7 @@ class Location(ApiModel):
 
 class User(ApiModel):
 
-    def __init__(self, id, *args, **kwargs):
+    def __init__(self, id=None, *args, **kwargs):
         self.id = id
         for key, value in six.iteritems(kwargs):
             setattr(self, key, value)
